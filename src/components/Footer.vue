@@ -45,7 +45,7 @@ export default {
   name: 'Footer',
   data() {
     return {
-      logoPath: '/images/BergArchitect.jpg',
+      logoPath: new URL('@/assets/images/BergArchitect.jpg', import.meta.url).href,
       currentYear: new Date().getFullYear()
     }
   }

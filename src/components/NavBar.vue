@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       isMenuOpen: false,
-      logoPath: '/images/BergArchitect.jpg'
+      logoPath: new URL('@/assets/images/BergArchitect.jpg', import.meta.url).href
     }
   },
   methods: {

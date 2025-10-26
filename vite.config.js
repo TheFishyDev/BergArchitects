@@ -6,20 +6,13 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
-// Helper function to copy public files
+import { resolve } from 'path';
+
 export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
     vueDevTools(),
-    {
-      name: 'copy-public',
-      apply: 'build',
-      buildStart() {
-        // This ensures the public directory is copied to dist
-        // No need to manually copy files - Vite handles this automatically
-      }
-    }
   ],
   resolve: {
     alias: {
@@ -33,12 +26,16 @@ export default defineConfig({
     assetsDir: 'assets',
     emptyOutDir: true,
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html')
+      },
       output: {
         entryFileNames: 'assets/[name]-[hash].js',
         chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          // Keep images in their original directory structure
-          if (assetInfo.name.match(/\.(png|jpe?g|svg|gif|webp|avif)$/)) {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|webp|avif/i.test(ext)) {
             return 'assets/images/[name]-[hash][extname]';
           }
           return 'assets/[name]-[hash][extname]';
