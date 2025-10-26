@@ -45,9 +45,14 @@ export default {
   name: 'Footer',
   data() {
     return {
-      logoPath: new URL('@/assets/images/BergArchitect.jpg', import.meta.url).href,
+      logoPath: '',
       currentYear: new Date().getFullYear()
     }
+  },
+  mounted() {
+    // Use import.meta.glob to get the hashed filename
+    const modules = import.meta.glob('@/assets/images/BergArchitect.jpg', { eager: true });
+    this.logoPath = modules['/src/assets/images/BergArchitect.jpg'].default;
   }
 }
 </script>
