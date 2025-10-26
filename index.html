@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="description" content="Berg Architects - Innovative architectural designs that blend form, function, and sustainability. Specializing in residential, commercial, and public spaces.">
+    <meta name="keywords" content="architecture, design, construction, interior design, sustainable architecture, Berg Architects">
+    <meta name="author" content="Berg Architects">
+    <meta name="theme-color" content="#4da6ff">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bergarchitects.com/">
+    <meta property="og:title" content="Berg Architects - Innovative Architectural Design">
+    <meta property="og:description" content="Berg Architects - Innovative architectural designs that blend form, function, and sustainability.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://bergarchitects.com/">
+    <meta name="twitter:title" content="Berg Architects - Innovative Architectural Design">
+    <meta name="twitter:description" content="Berg Architects - Innovative architectural designs that blend form, function, and sustainability.">
+    <meta name="twitter:image" content="/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4da6ff">
+    <meta name="msapplication-TileColor" content="#4da6ff">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </noscript>
+    
+    <title>Berg Architects - Innovative Architectural Design</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/src/assets/main.css" as="style">
+    
+    <!-- Critical CSS (inline for better performance) -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+        overflow-x: hidden;
+      }
+      #app {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .main-content {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Content will be injected here by Vue -->
+    </div>
+    
+    <!-- Scripts are loaded at the end of the body for better performance -->
+    <script type="module" src="/src/main.js"></script>
+    
+    <!-- Load non-critical CSS asynchronously -->
+    <link rel="stylesheet" href="/src/assets/main.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support media="print" -->
+    <noscript>
+      <link rel="stylesheet" href="/src/assets/main.css">
+    </noscript>
+    
+    <!-- Add any additional scripts or tracking codes here -->
+  </body>
+</html>
