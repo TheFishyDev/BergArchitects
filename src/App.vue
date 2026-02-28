@@ -27,8 +27,8 @@ export default {
 @import './assets/main.css';
 
 :root {
-  --primary-color: #4da6ff;
-  --primary-dark: #0077e6;
+  --primary-color: #000000;
+  --primary-dark: #000000;
   --secondary-color: #ff4d4d;
   --text-color: #333;
   --light-gray: #f8f9fa;

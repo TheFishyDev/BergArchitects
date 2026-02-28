@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
-import Projects from '../views/Projects.vue';
+import Gallery from '../views/Gallery.vue';
 import Contact from '../views/Contact.vue';
 
 const routes = [
@@ -22,11 +22,11 @@ const routes = [
     }
   },
   {
-    path: '/projects',
-    name: 'Projects',
-    component: Projects,
+    path: '/gallery',
+    name: 'Gallery',
+    component: Gallery,
     meta: {
-      title: 'Our Projects - Berg Architects'
+      title: 'Our Gallery - Berg Architects'
     }
   },
   {
@@ -48,7 +48,6 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    // Always scroll to top when navigating to a new route
     if (savedPosition) {
       return savedPosition;
     } else {

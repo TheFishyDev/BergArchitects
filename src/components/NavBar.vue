@@ -4,14 +4,14 @@
       <nav class="navbar">
         <div class="logo">
           <router-link to="/">
-            <img :src="logoPath" alt="Berg Architects" class="logo-img" />
+            <div class="NavBarLabel">BERG Architects</div>
           </router-link>
         </div>
         
         <div class="nav-links" :class="{ 'active': isMenuOpen }">
           <router-link to="/" @click="closeMenu">Home</router-link>
           <router-link to="/about" @click="closeMenu">About Us</router-link>
-          <router-link to="/projects" @click="closeMenu">Projects</router-link>
+          <router-link to="/gallery" @click="closeMenu">Gallery</router-link>
           <router-link to="/contact" @click="closeMenu">Contact</router-link>
         </div>
         

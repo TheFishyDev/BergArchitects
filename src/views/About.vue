@@ -14,16 +14,12 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Our Story</h2>
-          <p class="section-subtitle">Crafting architectural excellence since 2005</p>
         </div>
         <div class="story-content">
           <div class="story-text">
-            <p>Founded in 2005, Berg Architects has grown from a small design studio into a renowned architectural firm with a portfolio spanning residential, commercial, and public projects. Our journey began with a shared vision: to create spaces that not only meet functional requirements but also inspire and uplift the human spirit.</p>
-            <p>Over the years, we've had the privilege of working with diverse clients, from homeowners to large corporations, each with unique needs and aspirations. Our commitment to excellence, attention to detail, and passion for innovation have been the cornerstones of our success.</p>
-            <p>Today, with a team of talented architects, designers, and planners, we continue to push the boundaries of architectural design while maintaining our core values of sustainability, functionality, and aesthetic excellence.</p>
-          </div>
-          <div class="story-image">
-            <div class="image-container"></div>
+            <p>BERG Architects is a dynamic Architectural and Project Management practice located in South Africa. We cater to both national and international clients, offering a blend of creativity and practicality in our design approach.</p>
+            <p>Our team thrives on challenges and specializes in crafting bespoke designs that stand out. With over 30 years of experience in architecture and project management, we deliver costeffective solutions that enhance the value of your project</p>
+            <p>Let BERG Architects help you realize your aspirations and uncover new opportunities within your project journey</p>
           </div>
         </div>
       </div>
@@ -43,55 +39,6 @@
             </div>
             <h3>{{ value.title }}</h3>
             <p>{{ value.description }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Team -->
-    <section class="section team-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Meet Our Team</h2>
-          <p class="section-subtitle">The creative minds behind our success</p>
-        </div>
-        <div class="team-grid">
-          <div class="team-member" v-for="(member, index) in teamMembers" :key="index">
-            <div class="member-image">
-              <div class="image-placeholder"></div>
-              <div class="social-links">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h3>{{ member.name }}</h3>
-              <p class="position">{{ member.position }}</p>
-              <p class="bio">{{ member.bio }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section testimonials">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title">Client Testimonials</h2>
-          <p class="section-subtitle">What our clients say about us</p>
-        </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card" v-for="(testimonial, index) in testimonials" :key="index">
-            <div class="quote-icon">
-              <i class="fas fa-quote-left"></i>
-            </div>
-            <p class="testimonial-text">{{ testimonial.text }}</p>
-            <div class="client-info">
-              <div class="client-name">{{ testimonial.name }}</div>
-              <div class="client-position">{{ testimonial.position }}, {{ testimonial.company }}</div>
-            </div>
           </div>
         </div>
       </div>
@@ -209,10 +156,11 @@ export default {
   justify-content: center;
   text-align: center;
   color: white;
-  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-image: url('/images/MainImage.jpeg');
   background-size: cover;
   background-position: center;
   margin-bottom: 80px;
+  filter: grayscale(100%);
 }
 
 .page-header h1 {
@@ -278,37 +226,27 @@ export default {
 }
 
 .story-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-
-.story-text p {
-  margin-bottom: 20px;
-  line-height: 1.8;
-  color: #555;
-  font-size: 1.1rem;
-}
-
-.story-image {
-  position: relative;
-  height: 100%;
-  min-height: 400px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
+ 
+.story-text {
   width: 100%;
-  height: 100%;
-  background-image: url('https://images.unsplash.com/photo 1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-  background-size: cover;
-  background-position: center;
+}
+ 
+.story-text p {
+  margin-bottom: 25px;
+  line-height: 1.8;
+  color: #444;
+  font-size: 1.15rem;
+  text-align: justify;
+  text-align-last: center;
+  font-weight: 400;
 }
 
 /* Values Section */
@@ -570,11 +508,12 @@ export default {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-image: url('/images/MainImage.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
+  filter: grayscale(100%);
 }
 
 .cta-overlay {

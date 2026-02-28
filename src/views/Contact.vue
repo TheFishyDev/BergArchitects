@@ -247,10 +247,11 @@ export default {
   justify-content: center;
   text-align: center;
   color: white;
-  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-image: url('/images/MainImage.jpeg');
   background-size: cover;
   background-position: center;
   margin-bottom: 80px;
+  filter: grayscale(100%);
 }
 
 .page-header h1 {

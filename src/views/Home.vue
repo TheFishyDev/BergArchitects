@@ -5,33 +5,9 @@
       <div class="hero-content">
         <h1>Shaping the Future of Architecture</h1>
         <p>Innovative designs that blend form, function, and sustainability</p>
-        <router-link to="/projects" class="btn">View Our Work</router-link>
+        <router-link to="/gallery" class="btn">View Our Work</router-link>
       </div>
       <div class="hero-overlay"></div>
-    </section>
-
-    <!-- Featured Projects -->
-    <section class="section featured-projects">
-      <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-          <div 
-            v-for="(project, index) in featuredProjects" 
-            :key="index" 
-            class="project-card"
-            :style="{ backgroundImage: `url(${project.image})` }"
-          >
-            <div class="project-overlay">
-              <h3>{{ project.title }}</h3>
-              <p>{{ project.type }}</p>
-              <router-link :to="`/projects/${project.id}`" class="btn btn-secondary">View Project</router-link>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-4">
-          <router-link to="/projects" class="btn">View All Projects</router-link>
-        </div>
-      </div>
     </section>
 
     <!-- About Section -->
@@ -39,9 +15,9 @@
       <div class="container">
         <div class="about-content">
           <div class="about-text">
-            <h2 class="section-title">Crafting Timeless Architecture</h2>
-            <p>At Berg Architects, we believe that great architecture is born from a deep understanding of our clients' needs, the environment, and the latest technological advancements. Our team of passionate architects and designers work together to create spaces that inspire and endure.</p>
-            <p>With over 15 years of experience in the industry, we've delivered exceptional projects that have transformed communities and redefined skylines.</p>
+            <h2 class="section-title">Our Mission</h2>
+            <h3>We add value to your investment</h3>
+            <p>Through thoughtful design, strategic planning, and careful project execution, we ensure every decision enhances both the functional performance and long-term financial value of your property, delivering spaces that are not only beautifully designed but built to last.</p>
             <router-link to="/about" class="btn">Learn More About Us</router-link>
           </div>
           <div class="about-image">
@@ -56,7 +32,7 @@
     <!-- Services Section -->
     <section class="section services-section">
       <div class="container">
-        <h2 class="section-title text-center">Our Services</h2>
+        <h2 class="section-title text-center">Our services cover</h2>
         <div class="services-grid">
           <div class="service-card" v-for="(service, index) in services" :key="index">
             <div class="service-icon">
@@ -64,26 +40,6 @@
             </div>
             <h3>{{ service.title }}</h3>
             <p>{{ service.description }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section testimonials">
-      <div class="container">
-        <h2 class="section-title text-center">What Our Clients Say</h2>
-        <div class="testimonials-slider">
-          <div class="testimonial" v-for="(testimonial, index) in testimonials" :key="index">
-            <div class="testimonial-content">
-              <p class="quote">"{{ testimonial.quote }}"</p>
-              <div class="client-info">
-                <div class="client-details">
-                  <h4>{{ testimonial.name }}</h4>
-                  <p class="position">{{ testimonial.position }}, {{ testimonial.company }}</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -128,42 +84,36 @@ export default {
           image: 'https://images.unsplash.com/photo-1499793983690-29d59a6fd5a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
         }
       ],
+
+
       services: [
         {
-          title: 'Architectural Design',
+          title: 'Building design',
           description: 'Innovative and sustainable design solutions tailored to your needs and vision.',
+          icon: 'fas fa-building'
+        },
+        {
+          title: 'Council submission',
+          description: 'Professional preparation and coordination of council documentation to ensure smooth and compliant approvals.',
+          icon: 'fas fa-certificate'
+        },
+        {
+          title: 'Technical Documentation',
+          description: 'Precise and comprehensive technical drawings to support efficient and accurate construction.',
           icon: 'fas fa-drafting-compass'
         },
         {
-          title: 'Interior Design',
-          description: 'Creating functional and beautiful interior spaces that reflect your style.',
-          icon: 'fas fa-couch'
+          title: 'Estminating Building Costs',
+          description: 'Accurate and transparent cost estimates to guide your budget and support informed project decisions.',
+          icon: 'fas fa-calculator '
         },
         {
-          title: 'Urban Planning',
-          description: 'Shaping sustainable and livable communities through thoughtful planning.',
-          icon: 'fas fa-city'
-        },
-        {
-          title: 'Renovation',
-          description: 'Breathing new life into existing spaces with creative renovation solutions.',
-          icon: 'fas fa-hammer'
+          title: 'Managing projects',
+          description: 'Strategic project oversight ensuring quality delivery, budget control, and timely completion.',
+          icon: 'fas fa-calendar'
+
         }
       ],
-      testimonials: [
-        {
-          quote: 'Working with Berg Architects was a game-changer for our project. Their attention to detail and innovative approach exceeded our expectations.',
-          name: 'Sarah Johnson',
-          position: 'CEO',
-          company: 'Urban Living'
-        },
-        {
-          quote: 'The team delivered exceptional results on time and within budget. Their designs perfectly captured our vision.',
-          name: 'Michael Chen',
-          position: 'Director',
-          company: 'Horizon Developments'
-        }
-      ]
     }
   }
 }
@@ -175,15 +125,17 @@ export default {
   position: relative;
   height: 90vh;
   min-height: 600px;
-  background-image: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-image: url('/images/MainImage.jpeg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   overflow: hidden;
+  filter: grayscale(100%);
 }
 
 .hero-overlay {
@@ -330,7 +282,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-image: url('/images/MainImage2.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -342,9 +294,30 @@ export default {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   margin-top: 40px;
+}
+ 
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+ 
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }
 
 .service-card {
@@ -467,11 +440,12 @@ export default {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-image: url('/images/MainImage2.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
+  filter: grayscale(100%);
 }
 
 .cta-overlay {

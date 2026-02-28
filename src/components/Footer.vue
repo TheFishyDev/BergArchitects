@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <img :src="logoPath" alt="Berg Architects" class="logo-img" />
+          <div class="FooterLabel">BERG Architects</div>
           <p>Designing spaces that inspire and endure.</p>
           <div class="social-links">
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
