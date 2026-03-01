@@ -45,6 +45,25 @@
       </div>
     </section>
 
+    <section class="buildingtypes-section">
+      <div class="container">
+        <p class="intro-text">Building Types:</p>
+ 
+        <ul class="building-types-list">
+          <li class="building-type-item">Luxury homes</li>
+          <li class="building-type-item">Residential projects including townhouse complexes and apartment buildings</li>
+          <li class="building-type-item">Shopping centers</li>
+          <li class="building-type-item">Gas stations and retail stores</li>
+          <li class="building-type-item">Healthcare facilities</li>
+          <li class="building-type-item">Factories and industrial sites</li>
+          <li class="building-type-item">Schools and public institutions</li>
+          <li class="building-type-item">Hotels and leisure resorts</li>
+        </ul>
+        
+        <p class="conclusion-text">Our extensive portfolio demonstrates our adaptability and our unwavering dedication to delivering excellence in every project.</p>
+      </div>
+    </section>
+
     <!-- Call to Action -->
     <section class="cta-section">
       <div class="container">
@@ -587,5 +606,68 @@ export default {
 
 .fade-in-up {
   animation: fadeInUp 0.6s ease forwards;
+}
+
+.buildingtypes-section {
+  padding: 50px 0;
+  background: #ffffff;
+}
+
+.buildingtypes-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.building-types-list {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto 25px;
+  padding: 0;
+  columns: 1; /* Top-down layout */
+}
+
+.building-type-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 20px;
+}
+
+.building-type-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.conclusion-text {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .building-types-list {
+    columns: 1; /* Already 1, but keeping for consistency */
+  }
 }
 </style>

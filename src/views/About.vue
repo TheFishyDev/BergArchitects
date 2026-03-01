@@ -4,7 +4,7 @@
     <section class="page-header">
       <div class="container">
         <h1>About Berg Architects</h1>
-        <p>Designing spaces that inspire and endure</p>
+        <p>We add value to your investments</p>
       </div>
       <div class="overlay"></div>
     </section>

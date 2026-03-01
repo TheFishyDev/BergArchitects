@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <div class="FooterLabel">BERG Architects</div>
+          <div class="FooterLabel">BERG architect buro</div>
           <p>Designing spaces that inspire and endure.</p>
           <div class="social-links">
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -26,9 +26,9 @@
         <div class="footer-contact">
           <h3>Contact Us</h3>
           <ul>
-            <li><i class="fas fa-map-marker-alt"></i> 123 Design Street, Architecture District, 10001</li>
-            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-            <li><i class="fas fa-envelope"></i> info@bergarchitects.com</li>
+            <li><i class="fas fa-map-marker-alt"></i>CAPE TOWN | SALDANHA | OVERSTRAND | POTCHEFSTROOM | HARTEBEESPOORT</li>
+            <li><i class="fas fa-phone"></i>+27 606 2121 887</li>
+            <li><i class="fas fa-envelope"></i>info@bergarch.co.za</li>
           </ul>
         </div>
       </div>

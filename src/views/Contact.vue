@@ -20,22 +20,11 @@
             
             <div class="info-item">
               <div class="info-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="info-content">
-                <h3>Our Office</h3>
-                <p>123 Design Street<br>Architecture District<br>New York, NY 10001</p>
-              </div>
-            </div>
-            
-            <div class="info-item">
-              <div class="info-icon">
                 <i class="fas fa-phone-alt"></i>
               </div>
               <div class="info-content">
                 <h3>Phone</h3>
-                <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-                <p><a href="tel:+15559876543">+1 (555) 987-6543</a></p>
+                <p><a href="tel:+27606212188">+27 606 2121 88</a></p>
               </div>
             </div>
             
@@ -45,8 +34,7 @@
               </div>
               <div class="info-content">
                 <h3>Email</h3>
-                <p><a href="mailto:info@bergarchitects.com">info@bergarchitects.com</a></p>
-                <p><a href="mailto:support@bergarchitects.com">support@bergarchitects.com</a></p>
+                <p><a href="mailto:info@bergarch.co.za">info@bergarch.co.za</a></p>
               </div>
             </div>
             
@@ -56,7 +44,7 @@
               </div>
               <div class="info-content">
                 <h3>Working Hours</h3>
-                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
                 Saturday: 10:00 AM - 4:00 PM<br>
                 Sunday: Closed</p>
               </div>
@@ -110,7 +98,7 @@
                   type="tel" 
                   id="phone" 
                   v-model="formData.phone" 
-                  placeholder="+1 (555) 123-4567"
+                  placeholder="+27 00 000 0000"
                 >
               </div>
               
@@ -171,7 +159,7 @@
     <!-- Map Section -->
     <section class="map-section">
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2152090570536!2d-73.9878446845938!3d40.74844047932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMTMuMiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13521483.056227112!2d16.646711487562506!3d-34.168253104938216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34a689d9ee1251%3A0xe85d630c1fa4e8a0!2sSouth%20Africa!5e0!3m2!1sen!2sza!4v1772377176541!5m2!1sen!2sza"
         width="100%" 
         height="450" 
         style="border:0;" 

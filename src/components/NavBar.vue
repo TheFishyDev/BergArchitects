@@ -4,7 +4,7 @@
       <nav class="navbar">
         <div class="logo">
           <router-link to="/">
-            <div class="NavBarLabel">BERG Architects</div>
+            <div class="NavBarLabel"><a style="font-size: 2em !important;">BERG</a><b style="font-size: 0.8em !important;"> Architect Buro</b></div>
           </router-link>
         </div>
         
@@ -67,6 +67,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  padding-bottom: 2%;
 }
 
 .logo {
@@ -80,6 +81,7 @@ export default {
 }
 
 .nav-links {
+  padding-top: 2%;
   display: flex;
   gap: 30px;
 }
